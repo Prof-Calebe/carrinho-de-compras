@@ -1,7 +1,6 @@
 package br.calebe.exemplos.ex01;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertArrayEquals;
 import org.junit.Before;
 import org.junit.Test;
 
