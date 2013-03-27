@@ -3,7 +3,6 @@ package br.calebe.exemplos.ex02;
 import br.calebe.exemplos.ex02.controller.ClasseExemploController;
 import junit.framework.Assert;
 import org.easymock.EasyMock;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.api.easymock.PowerMock;
