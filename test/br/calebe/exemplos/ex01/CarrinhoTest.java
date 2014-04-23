@@ -1,6 +1,6 @@
 package br.calebe.exemplos.ex01;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,7 +17,7 @@ public class CarrinhoTest {
     public void colocandoZeroProduto() throws CarrinhoVazioExpected {
         Produto menor;
         menor = carrinho.menorProduto();
-        assertArrayEquals(new Object[]{null}, new Object[]{menor});
+        assertEquals(null, menor);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class CarrinhoTest {
         carrinho.add(livro);
         Produto menor;
         menor = carrinho.menorProduto();
-        assertArrayEquals(new Object[]{livro}, new Object[]{menor});
+        assertEquals(livro, menor);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class CarrinhoTest {
         carrinho.add(deitel);
         Produto menor;
         menor = carrinho.menorProduto();
-        assertArrayEquals(new Object[]{livro}, new Object[]{menor});
+        assertEquals(livro, menor);
     }
 
     @Test
@@ -46,6 +46,6 @@ public class CarrinhoTest {
         carrinho.add(original);
         Produto copia = new Produto("Java em 24 horas", 50.00);
         original = carrinho.menorProduto();
-        assertArrayEquals(new Object[]{original}, new Object[]{copia});
+        assertEquals(original, copia);
     }
 }
