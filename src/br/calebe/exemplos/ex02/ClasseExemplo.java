@@ -1,6 +1,6 @@
 package br.calebe.exemplos.ex02;
 
-import br.calebe.exemplos.ex02.controller.ClasseExemploController;
+import br.calebe.exemplos.ex02.controller.ClasseFacadeController;
 
 /**
  *
@@ -8,11 +8,11 @@ import br.calebe.exemplos.ex02.controller.ClasseExemploController;
  */
 public class ClasseExemplo {
 
-    private ClasseExemploController controller;
+    private ClasseFacadeController controller;
     private String answer;
 
     public ClasseExemplo() throws Exception {
-        controller = new ClasseExemploController();
+        controller = new ClasseFacadeController();
     }
 
     public void run(int i) {

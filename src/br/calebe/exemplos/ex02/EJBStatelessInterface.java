@@ -7,7 +7,7 @@ import javax.ejb.Remote;
  * @author Calebe de Paula Bianchini
  */
 @Remote
-public interface EJBStatelessExemploInterface {
+public interface EJBStatelessInterface {
 
     String metodo(int i);
 }

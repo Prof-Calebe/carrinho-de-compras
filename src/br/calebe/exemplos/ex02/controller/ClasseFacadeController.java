@@ -1,6 +1,6 @@
 package br.calebe.exemplos.ex02.controller;
 
-import br.calebe.exemplos.ex02.EJBStatelessExemploInterface;
+import br.calebe.exemplos.ex02.EJBStatelessInterface;
 import java.io.FileInputStream;
 import java.util.Properties;
 import javax.naming.InitialContext;
@@ -9,15 +9,15 @@ import javax.naming.InitialContext;
  *
  * @author Calebe de Paula Bianchini
  */
-public class ClasseExemploController implements EJBStatelessExemploInterface {
+public class ClasseFacadeController implements EJBStatelessInterface {
 
-    private EJBStatelessExemploInterface ejb;
+    private EJBStatelessInterface ejb;
 
-    public ClasseExemploController() throws Exception {
+    public ClasseFacadeController() throws Exception {
         Properties props = new Properties();
         props.load(new FileInputStream("jndi.properties"));
         InitialContext ctx = new InitialContext(props);
-        ejb = (EJBStatelessExemploInterface) ctx.lookup("ejb/EJBStatelessExemplo");
+        ejb = (EJBStatelessInterface) ctx.lookup("ejb/EJBStatelessExemplo");
     }
 
     @Override
